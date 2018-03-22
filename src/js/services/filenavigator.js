@@ -8,6 +8,7 @@
             this.requesting = false;
             this.fileList = [];
             this.currentPath = this.getBasePath();
+            this.homePath = this.getBasePath();
             this.history = [];
             this.error = '';
 
@@ -53,6 +54,18 @@
             if (! self.currentPath.length) {
                 self.currentPath = this.getBasePath();
             }
+            /** Fix Floor Start **/
+            if (self.currentPath.length < self.homePath.length)
+            {
+                self.currentPath = self.homePath;
+            }
+            for(var i=0;i<self.homePath.length-1;i++){
+                if(self.currentPath[i] != self.homePath[i]){
+                    self.currentPath = self.homePath;
+                    break;
+                }
+            }
+            /** Fix Floor End **/
             var path = self.currentPath.join('/');
             self.requesting = true;
             self.fileList = [];
