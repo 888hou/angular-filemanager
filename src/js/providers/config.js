@@ -6,7 +6,7 @@
             appName: 'angular-filemanager v1.5',
             defaultLang: 'zh-cn',
             multiLang: true,
-
+/*
             listUrl: 'bridges/php/handler.php',
             uploadUrl: 'bridges/php/handler.php',
             renameUrl: 'bridges/php/handler.php',
@@ -21,6 +21,22 @@
             compressUrl: 'bridges/php/handler.php',
             extractUrl: 'bridges/php/handler.php',
             permissionsUrl: 'bridges/php/handler.php',
+*/
+            listUrl: 'FileManager/api.php',
+            uploadUrl: 'FileManager/api.php',
+            renameUrl: 'FileManager/api.php',
+            copyUrl: 'FileManager/api.php',
+            moveUrl: 'FileManager/api.php',
+            removeUrl: 'FileManager/api.php',
+            editUrl: 'FileManager/api.php',
+            getContentUrl: 'FileManager/api.php',
+            createFolderUrl: 'FileManager/api.php',
+            downloadFileUrl: 'FileManager/api.php',
+            downloadMultipleUrl: 'FileManager/api.php',
+            compressUrl: 'FileManager/api.php',
+            extractUrl: 'FileManager/api.php',
+            permissionsUrl: 'FileManager/api.php', 
+
             basePath: '/Public',
 
             searchForm: false,
@@ -45,8 +61,8 @@
                 pickFolders: false
             },
 
-            multipleDownloadFileName: 'angular-filemanager.zip',
-            filterFileExtensions: [],
+            multipleDownloadFileName: 'PackageDownload.zip',
+            filterFileExtensions: ['pdf','doc','docx','ppt','pptx','xls','xlsx','rtf','txt'],
             showExtensionIcons: true,
             showSizeForDirectories: false,
             useBinarySizePrefixes: false,
